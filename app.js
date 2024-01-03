@@ -1,8 +1,12 @@
+require("dotenv").config();
 const express = require('express');
+const contactRoutes = require("./routes/contactRoutes");
+const dbConnect = require("./config/dbConnection")
 
 const app = express();
 
-const contactRoutes = require("./routes/contactRoutes")
+dbConnect();
+
 
 app.use(express.json());
 app.use("/api/contacts", contactRoutes);

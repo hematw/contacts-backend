@@ -32,6 +32,13 @@ function errorHandler(err, req, res, next) {
                 "stackTrace": err.stack
             })
             break;
+        case constants.SERVER_ERROR:
+            res.status(statusCode).json({
+                "title": "Server Error",
+                "message": err.message,
+                "stackTrace": err.stack
+            })
+            break;
 
         default:
             console.log("Every thing is good.");
