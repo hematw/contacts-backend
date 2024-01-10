@@ -55,25 +55,22 @@ const loginUser = asyncHandler(async function (req, res) {
     const user = await User.findOne({ email });
     console.log(user);
     if (user && (await bcrypt.compare(password, user.password))) {
-        const token = jwt.sign(
-            {
-                user: {
-                    username: user.username,
-                    email: user.email,
-                    id: user.id
-                }
-            },
-            process.env.JWT_SECRET,
-            {
-                expiresIn: "1d"
+        const token = jwt.sign({
+            user: {
+                username: user.username,
+                email: user.email,
+                id: user.id
             }
+        },
+            process.env.JWT_SECRET,
+            { expiresIn: "5m" }
         )
-        res.json({token})
+        res.json({ token })
     } else {
         res.status(401);
         throw new Error("email or password is invalid!")
     }
-    
+
 })
 
 // @route GET current user
