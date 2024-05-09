@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./head") %>
+
+    <body>
+        <header>
+            <img class="logo" src="./atom_logo.png" alt="">
+
+            <div class="logo-container">
+                <h1>Contacts API</h1>
+            </div>
+            <div class="nav-links">
+                <a href="https://www.linkedin.com/in/hematw"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/hematw"><i class="bi bi-github"></i></a>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <h1 class="title">Use Contacts API for saving your contacts list</h1>
+                <p>You have to first register to use the API and save your contacts</p>
+
+                <section>
+                    <div class="doc-info">
+                        <h2>Register new user: </h2>
+                        <p>
+                            <span>Path to request: </span>
+                            <code>https://contacts-api-ekew.onrender.com//users/register</code>
+                        </p>
+                        <p>
+                            <span>Method: </span>
+                            <code>POST</code>
+                        </p>
+                        <p>
+                            <span>Required properties in request body : </span>
+                            <code>email, username, password</code>
+                        </p>
+                    </div>
+
+                    <div class="doc-info">
+                        <h2>Login user: </h2>
+                        <p>
+                            <span>Path to request: </span>
+                            <code>https://contacts-api-ekew.onrender.com//users/login</code>
+                        </p>
+                        <p>
+                            <span>Method: </span>
+                            <code>POST</code>
+                        </p>
+                        <p>
+                            <span>Required properties in request body: </span>
+                            <code>email, password</code>
+                        </p>
+                        <p class="important">
+                            When you provide correct credintials for login the API will give you a <code>token</code>
+                            that you should always include it in your requests header as Authentication to authorize your self
+                        </p>
+                    </div>
+
+                    <div class="doc-info">
+                        <h2>Get current user info: </h2>
+                        <p>
+                            <span>Path to request: </span>
+                            <code>https://contacts-api-ekew.onrender.com//users/current</code>
+                        </p>
+                        <p>
+                            <span>Method: </span>
+                            <code>GET</code>
+                        </p>
+                        <p>
+                            <span>Required request body properties: </span>
+                            <code>Nothing is required</code>
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="doc-info">
+                        <h2>Create new contact: </h2>
+                        <p>
+                            <span>Path to request: </span>
+                            <code>https://contacts-api-ekew.onrender.com/api/contacts/</code>
+                        </p>
+                        <p>
+                            <span>Method: </span>
+                            <code>POST</code>
+                        </p>
+                        <p>
+                            <span>Required properties in request body: </span>
+                            <code>name, email, phone</code>
+                        </p>
+                    </div>
+
+                    <div class="doc-info">
+                        <h2>Get contact info by ID: </h2>
+                        <p>
+                            <span>Path to request: </span>
+                            <code>https://contacts-api-ekew.onrender.com//api/contacts/:id</code>
+                        </p>
+                        <p>
+                            <span>Method: </span>
+                            <code>GET</code>
+                        </p>
+                        <p>
+                            <span>Required Parameters: </span>
+                            Only <code>id</code> route parameter is required
+                        </p>
+                    </div>
+
+                    <div class="doc-info">
+                        <h2>Get all contacts info: </h2>
+                        <p>
+                            <span>Path to request: </span>
+                            <code>https://contacts-api-ekew.onrender.com//api/contacts/</code>
+                        </p>
+                        <p>
+                            <span>Method: </span>
+                            <code>GET</code>
+                        </p>
+                        <p>
+                            <span>Required properties in request body: </span>
+                            <code>Nothing is required</code>
+                        </p>
+                    </div>
+                </section>
+
+
+        </main>
+
+        <%- include("./footer") %>
+    </body>
+
+</html>
