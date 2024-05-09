@@ -19,6 +19,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             position: relative;
             color: #A91D3A;
             background-color: #272727;
@@ -35,7 +36,7 @@
             height: 6px;
             width: 100%;
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             left: 0;
         }
 
@@ -63,18 +64,29 @@
             -webkit-text-fill-color: transparent;
         }
 
-        main {
-        }
-        
-        .container {
-            background-color: #EEEEEE;
-            max-width: 976px;
-            margin: 40px auto;
-            padding: 2em 2.5em;
+        .doc-title {
+            padding: 2em;
         }
 
+        .container {
+            margin: 40px auto;
+            max-width: 976px;
+        }
+        
         .title {
             font-size: 2.2rem;
+        }
+        
+        section {
+            padding: 2em 2.5em;
+            background-color: #EEEEEE;
+            box-shadow: 4px 4px 12px #818181;
+            margin-bottom: 60px;
+        }
+
+        section h1 {
+            text-align: center;
+            margin: 0;
         }
 
         .doc-info {
@@ -104,7 +116,7 @@
         code {
             border-radius: 4px;
             color: #03d0c9;
-            background-color: #2c2c2c;
+            background-color: #3c3c3c;
             padding: 6px 10px;
         }
 
@@ -144,6 +156,24 @@
 
         .contant_box_404 {
             margin-top: -50px;
+        }
+
+        @media (max-width: 600px) {
+            p {
+                line-height: 2em;
+            }
+
+            header {
+                justify-content: center;
+                gap: 1em;
+            }
+
+            .nav-links a {
+                display: inline-block;
+                margin-bottom: 1em;
+                width: 30vw;
+                text-align: center;
+            }
         }
     </style>
 </head>

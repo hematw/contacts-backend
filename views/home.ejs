@@ -18,10 +18,13 @@
 
         <main>
             <div class="container">
-                <h1 class="title">Use Contacts API for saving your contacts list</h1>
-                <p>You have to first register to use the API and save your contacts</p>
+                <div class="doc-title">
+                    <h1 class="title">Use Contacts API for saving your contacts list</h1>
+                    <p class="important">You have to first register to use the API and save your contacts</p>
+                </div>
 
                 <section>
+                    <h1 class="title">User related routes</h1>
                     <div class="doc-info">
                         <h2>Register new user: </h2>
                         <p>
@@ -54,7 +57,8 @@
                         </p>
                         <p class="important">
                             When you provide correct credintials for login the API will give you a <code>token</code>
-                            that you should always include it in your requests header as Authentication to authorize your self
+                            that you should always include it in your requests header as Authentication to authorize
+                            your self
                         </p>
                     </div>
 
@@ -76,6 +80,7 @@
                 </section>
 
                 <section>
+                    <h1 class="title">Contact related routes</h1>
                     <div class="doc-info">
                         <h2>Create new contact: </h2>
                         <p>
@@ -105,6 +110,42 @@
                         <p>
                             <span>Required Parameters: </span>
                             Only <code>id</code> route parameter is required
+                        </p>
+                    </div>
+
+                    <div class="doc-info">
+                        <h2>Update a contact info by ID: </h2>
+                        <p>
+                            <span>Path to request: </span>
+                            <code>https://contacts-api-ekew.onrender.com//api/contacts/:id</code>
+                        </p>
+                        <p>
+                            <span>Method: </span>
+                            <code>PUT</code>
+                        </p>
+                        <p>
+                            <span>Required properties in request body: </span>
+                            <code>name, email, phone</code>
+                        </p>
+                        <p>
+                            <span>Required route parameter: </span>
+                            <code>id</code>
+                        </p>
+                    </div>
+
+                    <div class="doc-info">
+                        <h2>Delete a contact by ID: </h2>
+                        <p>
+                            <span>Path to request: </span>
+                            <code>https://contacts-api-ekew.onrender.com//api/contacts/:id</code>
+                        </p>
+                        <p>
+                            <span>Method: </span>
+                            <code>DELETE</code>
+                        </p>
+                        <p>
+                            <span>Required route parameter: </span>
+                            <code>id</code>
                         </p>
                     </div>
 
