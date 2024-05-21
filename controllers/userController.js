@@ -63,7 +63,7 @@ const loginUser = asyncHandler(async function (req, res) {
             }
         },
             process.env.JWT_SECRET,
-            { expiresIn: "5m" }
+            { expiresIn: "1h" }
         )
         res.json({ token })
     } else {
